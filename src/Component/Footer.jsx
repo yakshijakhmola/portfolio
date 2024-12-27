@@ -8,22 +8,27 @@ const Footer = () => {
     const FooterIcon =[
         {
             id: 1,
+            FooterIconLink: "javascript:void(0)",
             FooterIcon_img: <FaFacebook/>
         },
         {
             id: 2,
+            FooterIconLink: "javascript:void(0)",
             FooterIcon_img: <FaInstagram/>
         },
         {
             id: 3,
+            FooterIconLink: "javascript:void(0)",
             FooterIcon_img: <FaTwitter/>
         },
         {
             id: 4,
+            FooterIconLink: "https://www.linkedin.com/in/yakshi-jakhmola-312178325/",
             FooterIcon_img: <FaLinkedin/>
         },
         {
             id: 5,
+            FooterIconLink: "https://github.com/yakshijakhmola",
             FooterIcon_img: <FaGithub/>
         }
     ]
@@ -36,7 +41,7 @@ const Footer = () => {
                 </div>
                 <div className='grid grid-cols-5 grid-rows-1 gap-x-5 mt-5 xl:mt-0'>
                     {FooterIcon.map((val)=>(
-                        <a className='iconstyle' key={val.id}>{val.FooterIcon_img}</a>
+                        <a className='iconstyle' href={val.FooterIconLink} target='_blank' key={val.id}>{val.FooterIcon_img}</a>
                     ))}
                 </div>
             </div>

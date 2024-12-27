@@ -1,42 +1,6 @@
 import React from 'react'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick';
-import { assets } from '../../public/assets';
+import { assets } from '../assets/assets';
 const Project = () => {
-  const ProjectSlider = {
-    dots: false,
-    centerMode: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-        {
-        breakpoint: 1024,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false
-        }
-        },
-        {
-        breakpoint: 600,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-        }
-        },
-        {
-        breakpoint: 480,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-        }
-        }
-    ]
-  }
   const ProjectCard = [
     {
       id: 1,
@@ -90,31 +54,29 @@ const Project = () => {
     },
     {
       id: 11,
-      Project_img: assets.mmai,
+      Project_link: "https://ninjarankers.com/",
+      Project_img: assets.ninja,
     },
     {
       id: 12,
-      Project_link: "",
-      Project_img: assets.magnite,
+      Project_link: "https://wideindiaproducts.com/",
+      Project_img: assets.wide,
     }
   ]
   return (
     <div className='py-10' id='project'>
       <div className='container'>
-          <h2 className='text-xl xl:text-5xl lg:text-5xl md:text-3xl text-whitetheme font-bold font-HeadingFont text-right'>Client's get always exceptional <br/> works from me...</h2>
+          <h2 className='text-xl xl:text-5xl lg:text-5xl md:text-3xl text-whitetheme font-bold font-HeadingFont text-left'>All Project that is  live on <br/> website url</h2>
           <div className='grid grid-cols-12 mt-10'>
-              <Slider {...ProjectSlider} className='col-span-12 lg:col-span-8'>
-                {ProjectCard.map((val)=>{
-                  return(
-                    <div key={val.id}>
-                      <div className='mx-3'>
-                        <a href={val.Project_link}><img src={val.Project_img} className='rounded-xl shadow-xl'/></a>
-                      </div>
+              {ProjectCard.map((val)=>{
+                return(
+                  <div className='col-span-12 lg:col-span-4 m-3' key={val.id}>
+                    <div className=''>
+                      <a href={val.Project_link}><img src={val.Project_img} className='rounded-xl shadow-xl'/></a>
                     </div>
-                  )
-                })}
-              </Slider>
-              <div className='lg:col-span-4'></div>
+                  </div>
+                )
+              })}
           </div>
       </div>
     </div>

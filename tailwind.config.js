@@ -13,7 +13,8 @@ export default {
         'yellowtheme': '#F5BF02',
         'blacktheme': '#1A2421',
         'lightblacktheme': '#232B2B',
-        'whitetheme': '#fff'
+        'whitetheme': '#fff',
+        'ParaColor': 'rgb(184 184 184)',
       },
       container: {
         center: true,
